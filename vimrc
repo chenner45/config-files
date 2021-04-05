@@ -73,6 +73,7 @@ if filereadable($HOME.'/.vim/bundle/Vundle.vim/autoload/vundle.vim')
   " Syntax highlighting for all languages
   " Plugin sheerun/vim-polyglot
 
+  Plugin 'morhetz/gruvbox'
   call vundle#end()
 
   " Search all the files rather than limiting it.
@@ -101,12 +102,9 @@ syntax on                        " syntax highlighting
 
 " ****************** VISUAL *******************
 " Solarized color scheme with dark background
-set t_Co=16
+"set t_Co=16
 set background=dark
-" The silent invocation means that if Solarized isn't detected, Vim won't error
-" out on startup.
-" :silent! colorscheme solarized
-
+colorscheme gruvbox
 " Highlight cursor
 hi CursorColumn guibg=#333333
 
@@ -215,10 +213,10 @@ set scrolljump=3                 " lines to scroll when cursor leaves screen
 " set scrolloff=3                " minimum lines to keep above and below cursor
 set nofoldenable                 " auto fold code
 " set foldmethod=marker          " type of folding
-if version >= 703
-  set colorcolumn=+1             " highlights one column past textwidth to
+"if version >= 703
+ " set colorcolumn=+1             " highlights one column past textwidth to
                                  " act as a print margin
-endif
+"endif
 
 " Automatically highlight lines over textwidth characters
 " This may need WinEnter,BufNewFile,BufRead instead of BufWinEnter and match

@@ -45,7 +45,7 @@ zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' substitute 1
 # CUSTOMIZE(this_file)
-zstyle :compinstall filename '/home/samking/.zshrc'
+zstyle :compinstall filename '/home/chenner/.zshrc'
 
 # insert all expansions for expand completer
 zstyle ':completion:*:expand:*' tag-order all-expansions
@@ -67,11 +67,9 @@ zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 # servers I want to be able to use tab completion to complete.
 # You can also use the users array to set the usernames for those hosts.
 # CUSTOMIZE(hosts)
-hosts=(myth.stanford.edu corn.stanford.edu xenon.stanford.edu \
-       codethechange.org samking.org practicalunix.org)
+hosts=(myth.stanford.edu xenon.stanford.edu)
 # CUSTOMIZE(username)
-users=(samking)
-#accounts=(samking)
+users=(richchen)
 #zstyle ':completion:*:processes' command 'ps -o pid,s,nice,stime,args'
 #zstyle ':completion:*:urls' local 'www' '/var/www/htdocs' 'public_html'
 #zstyle '*' accounts $accounts
@@ -118,7 +116,6 @@ unsetopt pushd_ignore_dups
 setopt auto_list         # when tab completion is ambiguous, list choices
 setopt auto_menu         # when tab completion is ambiguous, use menu completion
                          # (fill in the next option when you press tab)
-setopt list_beep         # when tab completion is ambiguous, beep
 unsetopt menu_complete   # when tab completion is ambiguous, zsh automatically
                          # fills in the first option
 unsetopt list_ambiguous  # when there is an unambiguous prefix, insert that
@@ -146,10 +143,6 @@ unsetopt correct_all     # correct my bad spelling of all argument son a line
                          # This is unset because it is fairly common to have an
                          # argument that is similar to a file in the current
                          # directory (eg, sudo git would correct to .git)
-# CUSTOMIZE(keyboard_layout)
-setopt dvorak            # zsh knows that I use dvorak when correcting my typos
-                         # NOTE: if you use qwerty, just delete this line; there
-                         # is no "qwerty" option that needs to be set.
 setopt print_exit_value  # prints the exit value of commands when it's not 0
                          # (success); useful when writing shell scripts
 
@@ -171,8 +164,8 @@ setopt multios           # allows redirection to multiple i/o streams; ie,
 # Shell State
 
 # Zle - ZSH Line Editor (the thing that takes in your text and runs the shell)
-setopt beep              # zsh will beep when it's mad at me
-
+unsetopt BEEP              # zsh will NOT beep when it's mad at me
+unsetopt LIST_BEEP
 ################################################################################
 # ZSH PARAMS + environment vars -- see man zshparam for full descriptions
 #  * if you're interested in zsh scripting, man zshparam
