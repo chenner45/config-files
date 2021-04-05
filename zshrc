@@ -375,6 +375,7 @@ alias processes='echo "did you mean ps?"'
 alias off='sleep 0.5 && xset dpms force off'
 # alias ack=ack-grep
 
+alias m='ssh richchen@myth.stanford.edu'
 # if vim is installed, we probably never want to use vi
 if [ `command -v vim` ]; then
   alias vi=vim
