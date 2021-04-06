@@ -213,10 +213,10 @@ set scrolljump=3                 " lines to scroll when cursor leaves screen
 " set scrolloff=3                " minimum lines to keep above and below cursor
 set nofoldenable                 " auto fold code
 " set foldmethod=marker          " type of folding
-"if version >= 703
- " set colorcolumn=+1             " highlights one column past textwidth to
+if version >= 703
+  set colorcolumn=+1             " highlights one column past textwidth to
                                  " act as a print margin
-"endif
+endif
 
 " Automatically highlight lines over textwidth characters
 " This may need WinEnter,BufNewFile,BufRead instead of BufWinEnter and match
@@ -333,3 +333,7 @@ let b:match_ignorecase = 1
 " TODO: when I exit insert mode and have caps lock on, something is probably
 " wrong.  Either turn caps lock off or alert me of the fact that caps lock is
 " still on.
+
+
+let g:ycm_global_ycm_extra_conf = '/home/chenner/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+
