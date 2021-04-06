@@ -41,3 +41,11 @@ Note that most of the files in this repo aren't dot files (files whose names
 start with a dot).  That's because dot files are hidden by default, and it's
 more convenient to see these files by default.  However, your real config files
 (eg, `~/.vimrc` still need to be dot files.
+
+Notes for setup:
+1.  Clone Git
+2.  Run PluginInstall in vim to set up bundles
+3.  Run `~/config-files/setup-startup-scripts.bash`
+4.  Make sure cmake and python3-dev are installed (`sudo apt install build-essential cmake python3-dev`)
+5.  `python3 install.py --clangd-completer` and `python3 install.py --all` as needed from ./vim/bundle/YouCompleteMe
+6.  Remember to `source /config-files/zshrc` to refresh and new configurations
