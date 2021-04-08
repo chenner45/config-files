@@ -218,7 +218,7 @@ if version >= 703
                                  " act as a print margin
 endif
 
-set nohlsearch
+nnoremap <CR> :noh<CR><CR>
 
 " Automatically highlight lines over textwidth characters
 " This may need WinEnter,BufNewFile,BufRead instead of BufWinEnter and match
