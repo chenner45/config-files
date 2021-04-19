@@ -309,6 +309,8 @@ noremap / /\v
 
 autocmd bufenter * lcd %:p:h     " change directory the current file's
 
+set clipboard=unnamedplus
+
 " ****************** CODING *******************
 if has("autocmd") && exists("+omnifunc")
   autocmd Filetype *
